@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>seventysevenstars - 3D Printing Services</title>
+  <meta name="description" content="SeventySevenStars - High-quality custom 3D printing services in Kingston, ON. We specialize in prototypes, design assistance, and tailored prints.">
+  <title>SeventySevenStars - 3D Printing Services</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -17,6 +18,16 @@
       color: #fff;
       padding: 1rem 2rem;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 50px;
     }
 
     header h1 {
@@ -25,7 +36,7 @@
     }
 
     nav {
-      margin-top: 1rem;
+      margin-top: 0;
     }
 
     nav a {
@@ -80,9 +91,61 @@
       margin: 0;
     }
 
+    footer div a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+
+    form {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    form label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      color: #333;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: #222;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #444;
+    }
+
     @media (max-width: 768px) {
       .service, .portfolio-item {
         flex: 1 1 100%;
+      }
+
+      header {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+        display: inline-block;
       }
     }
   </style>
@@ -90,6 +153,7 @@
 <body>
 
 <header>
+  <img src="logo.png" alt="SeventySevenStars Logo">
   <h1>SeventySevenStars</h1>
   <nav>
     <a href="#services">Services</a>
@@ -115,6 +179,15 @@
       <p>Need help with your 3D models? We offer design optimization and consulting.</p>
     </div>
   </div>
+  <form action="/submit-form" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+    <button type="submit">Request a Quote</button>
+  </form>
 </section>
 
 <section id="portfolio">
@@ -123,14 +196,17 @@
     <div class="portfolio-item">
       <h3>Project 1</h3>
       <p>A customized figurine printed with intricate details.</p>
+      <img src="project1.jpg" alt="Project 1" loading="lazy">
     </div>
     <div class="portfolio-item">
       <h3>Project 2</h3>
       <p>Functional prototypes for a local tech startup.</p>
+      <img src="project2.jpg" alt="Project 2" loading="lazy">
     </div>
     <div class="portfolio-item">
       <h3>Project 3</h3>
       <p>Decorative home pieces that blend art and technology.</p>
+      <img src="project3.jpg" alt="Project 3" loading="lazy">
     </div>
   </div>
 </section>
@@ -138,7 +214,7 @@
 <section id="about">
   <h2>About Us</h2>
   <p>
-    seventysevenstars is a 3D printing business passionate about turning ideas into reality. 
+    SeventySevenStars is a 3D printing business passionate about turning ideas into reality. 
     With state-of-the-art printers and a commitment to quality, we specialize in custom prints, 
     prototyping, and design support. Whether you're an engineer, artist, or hobbyist, we're here to help.
   </p>
@@ -148,13 +224,16 @@
   <h2>Contact Us</h2>
   <p>
     Email: <a href="mailto:info@seventysevenstars.com">info@seventysevenstars.com</a><br>
-
     Location: Kingston, ON, Canada
   </p>
 </section>
 
 <footer>
-  <p>&copy; 2024 seventysevenstars. All rights reserved.</p>
+  <p>&copy; 2024 SeventySevenStars. All rights reserved.</p>
+  <div>
+    <a href="https://facebook.com" target="_blank">Facebook</a> |
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </div>
 </footer>
 
 </body>
