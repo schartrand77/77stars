@@ -133,6 +133,34 @@
       background: #444;
     }
 
+    /* Circle Icons */
+    .circle-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .circle-icons a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .circle-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .circle-icons img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     @media (max-width: 768px) {
       .service, .portfolio-item {
         flex: 1 1 100%;
@@ -233,6 +261,19 @@
   <div>
     <a href="https://facebook.com" target="_blank">Facebook</a> |
     <a href="https://instagram.com" target="_blank">Instagram</a>
+  </div>
+
+  <!-- Circle Icons at the bottom -->
+  <div class="circle-icons">
+    <a href="https://plex.seventysevenstars.com" target="_blank">
+      <img src="plex-icon.png" alt="Plex" title="Plex">
+    </a>
+    <a href="https://jellyfin.seventysevenstars.com" target="_blank">
+      <img src="jellyfin-icon.png" alt="Jellyfin" title="Jellyfin">
+    </a>
+    <a href="https://discord.gg/invite-code" target="_blank">
+      <img src="discord-icon.png" alt="Discord" title="Discord">
+    </a>
   </div>
 </footer>
 
