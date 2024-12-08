@@ -33,191 +33,119 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
-      overflow: hidden;
-      white-space: nowrap;
     }
 
-    /* Animation for title */
-    @keyframes animateTitle {
-      0%, 100% {
-        color: white;
-      }
-
-      0% {
-        color: white;
-      }
-
-    -webkit filter.33 turns grey
-        from.;
-
-Here’s the correct implementation to animate the title `seventysevenstars` with the letters turning grey from left to right once every 15 seconds:
-
-### Final Code
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SeventySevenStars - High-quality custom 3D printing services in Kingston, ON. We specialize in prototypes, design assistance, and tailored prints.">
-  <title>seventysevenstars - 3D Printing Services</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
+    nav {
+      margin-top: 0;
     }
 
-    header {
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .services, .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .service, .portfolio-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      flex: 1 1 calc(33.333% - 2rem);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover, .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .service h3, .portfolio-item h3 {
+      margin-top: 0;
+      color: #555;
+    }
+
+    footer {
       background: #222;
       color: #fff;
-      padding: 1rem 2rem;
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      padding: 1rem;
+      margin-top: 2rem;
     }
 
-    header img {
-      height: 50px;
-    }
-
-    header h1 {
+    footer p {
       margin: 0;
-      font-size: 2.5rem;
-      font-family: "Courier New", Courier, monospace;
-      overflow: hidden;
-      display: inline-block;
     }
 
-    /* Animation for title */
-    @keyframes animateTitle {
-      0% {
-        color: white;
-      }
-        Here's corrected Spped
-
-Here’s the full implementation, now fixed to ensure the letters of `seventysevenstars` turn grey one by one from left to right every 15 seconds:
-
-### Final Updated Code
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SeventySevenStars - High-quality custom 3D printing services in Kingston, ON. We specialize in prototypes, design assistance, and tailored prints.">
-  <title>seventysevenstars - 3D Printing Services</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background: #222;
+    footer div a {
       color: #fff;
-      padding: 1rem 2rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+
+    /* Circle Icons */
+    .circle-icons {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
 
-    header img {
-      height: 50px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-family: "Courier New", Courier, monospace;
+    .circle-icons a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
       overflow: hidden;
-      display: inline-block;
-      white-space: nowrap;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
     }
 
-    /* Animation for title */
-    @keyframes animateTitle {
-      0%, 100% {
-        color: white;
+    .circle-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .circle-icons img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .service, .portfolio-item {
+        flex: 1 1 100%;
       }
 
-      0% {
-        color: white. }
-Each
+      header {
+        flex-wrap: wrap;
+        text-align: center;
+      }
 
-Here is the **complete and working implementation** for animating the `seventysevenstars` title, with letters turning grey from left to right every 15 seconds.
-
-### Final Code
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SeventySevenStars - High-quality custom 3D printing services in Kingston, ON. We specialize in prototypes, design assistance, and tailored prints.">
-  <title>seventysevenstars - 3D Printing Services</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    header {
-      background: #222;
-      color: #fff;
-      padding: 1rem 2rem;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header img {
-      height: 50px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      font-family: "Courier New", Courier, monospace;
-      overflow: hidden;
-      white-space: nowrap;
-      display: inline-block;
-      animation: animateTitle 15s infinite;
-    }
-
-    /* Animation for title */
-    @keyframes animateTitle {
-      0% { color: white; }
-      10% { color: #ccc; }
-      20% { color: #bbb; }
-      30% { color: #aaa; }
-      40% { color: #999; }
-      50% { color: #888; }
-      60% { color: #777; }
-      70% { color: #666; }
-      80% { color: #555; }
-      90% { color: #444; }
-      100% { color: white; }
+      nav a {
+        margin: 0.5rem 0;
+        display: inline-block;
+      }
     }
   </style>
 </head>
@@ -226,11 +154,77 @@ Here is the **complete and working implementation** for animating the `seventyse
 <header>
   <img src="https://i.imgur.com/qffhjnW.jpg" alt="seventysevenstars Logo">
   <h1>seventysevenstars</h1>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section>
-  <p>Welcome to our 3D printing services site!</p>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">
+      <h3>Custom 3D Printing</h3>
+      <p>High-quality prints tailored to your needs. Materials include PLA, PETG, and more.</p>
+    </div>
+    <div class="service">
+      <h3>Rapid Prototyping</h3>
+      <p>Fast turnaround for prototypes to bring your ideas to life quickly.</p>
+    </div>
+    <div class="service">
+      <h3>Design Assistance</h3>
+      <p>Need help with your 3D models? We offer design optimization and consulting.</p>
+    </div>
+  </div>
 </section>
+
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio">
+    <div class="portfolio-item">
+      <h3>Project 1</h3>
+      <p>Prints for Turtles Kingston</p>
+      <img src="project1.jpg" alt="Project 1" loading="lazy">
+    </div>
+    <div class="portfolio-item">
+      <h3>Project 2</h3>
+      <p>Plex Lightbox</p>
+      <img src="project2.jpg" alt="Project 2" loading="lazy">
+    </div>
+    <div class="portfolio-item">
+      <h3>Project 3</h3>
+      <p>Decorative home pieces that blend art and technology.</p>
+      <img src="project3.jpg" alt="Project 3" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    seventsevenstars is a 3D printing business passionate about turning ideas into reality. 
+    With state-of-the-art printers and a commitment to quality, we specialize in custom prints, 
+    prototyping, and design support. Whether you're an engineer, artist, or hobbyist, we're here to help.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>
+    Email: <a href="mailto:info@seventysevenstars.com">info@seventysevenstars.com</a><br>
+    Location: Kingston, ON, Canada
+  </p>
+</section>
+
+<footer>
+  <p>&copy; 2024 SeventySevenStars. All rights reserved.</p>
+  <div>
+    <a href="https://facebook.com" target="_blank">Facebook</a> |
+    <a href="https://instagram.com" target="_blank">Instagram</a>
+  </div>
+</footer>
 
 </body>
 </html>
