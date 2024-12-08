@@ -33,21 +33,6 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
-      display: inline-block;
-      background: linear-gradient(to right, grey 0%, grey 0%, #fff 0%, #fff 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: greyAnimation 5s linear infinite;
-    }
-
-    @keyframes greyAnimation {
-      0% {
-        background-position: 100% 0;
-      }
-      100% {
-        background-position: 0 0;
-      }
     }
 
     nav {
@@ -59,6 +44,108 @@
       text-decoration: none;
       margin: 0 1rem;
       font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .services, .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .service, .portfolio-item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      flex: 1 1 calc(33.333% - 2rem);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service:hover, .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .service h3, .portfolio-item h3 {
+      margin-top: 0;
+      color: #555;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    footer div a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: bold;
+    }
+
+    /* Circle Icons */
+    .circle-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .circle-icons a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .circle-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .circle-icons img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .service, .portfolio-item {
+        flex: 1 1 100%;
+      }
+
+      header {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+        display: inline-block;
+      }
     }
   </style>
 </head>
@@ -77,10 +164,59 @@
 
 <section id="services">
   <h2>Our Services</h2>
-  <!-- Content here -->
+  <div class="services">
+    <div class="service">
+      <h3>Custom 3D Printing</h3>
+      <p>High-quality prints tailored to your needs. Materials include PLA, PETG, and more.</p>
+    </div>
+    <div class="service">
+      <h3>Rapid Prototyping</h3>
+      <p>Fast turnaround for prototypes to bring your ideas to life quickly.</p>
+    </div>
+    <div class="service">
+      <h3>Design Assistance</h3>
+      <p>Need help with your 3D models? We offer design optimization and consulting.</p>
+    </div>
+  </div>
 </section>
 
-<!-- Other sections -->
+<section id="portfolio">
+  <h2>Portfolio</h2>
+  <div class="portfolio">
+    <div class="portfolio-item">
+      <h3>Project 1</h3>
+      <p>Prints for Turtles Kingston</p>
+      <img src="project1.jpg" alt="Project 1" loading="lazy">
+    </div>
+    <div class="portfolio-item">
+      <h3>Project 2</h3>
+      <p>Plex Lightbox</p>
+      <img src="project2.jpg" alt="Project 2" loading="lazy">
+    </div>
+    <div class="portfolio-item">
+      <h3>Project 3</h3>
+      <p>Decorative home pieces that blend art and technology.</p>
+      <img src="project3.jpg" alt="Project 3" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    seventsevenstars is a 3D printing business passionate about turning ideas into reality. 
+    With state-of-the-art printers and a commitment to quality, we specialize in custom prints, 
+    prototyping, and design support. Whether you're an engineer, artist, or hobbyist, we're here to help.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>
+    Email: <a href="mailto:info@seventysevenstars.com">info@seventysevenstars.com</a><br>
+    Location: Kingston, ON, Canada
+  </p>
+</section>
 
 <footer>
   <p>&copy; 2024 SeventySevenStars. All rights reserved.</p>
