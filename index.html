@@ -33,6 +33,21 @@
     header h1 {
       margin: 0;
       font-size: 2.5rem;
+      display: inline-block;
+      background: linear-gradient(to right, grey 0%, grey 0%, #fff 0%, #fff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: greyAnimation 15s linear infinite;
+    }
+
+    @keyframes greyAnimation {
+      0% {
+        background-position: 100% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
     }
 
     nav {
@@ -204,7 +219,7 @@
 <section id="about">
   <h2>About Us</h2>
   <p>
-    seventsevenstars is a 3D printing business passionate about turning ideas into reality. 
+    seventysevenstars is a 3D printing business passionate about turning ideas into reality. 
     With state-of-the-art printers and a commitment to quality, we specialize in custom prints, 
     prototyping, and design support. Whether you're an engineer, artist, or hobbyist, we're here to help.
   </p>
