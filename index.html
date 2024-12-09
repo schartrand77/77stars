@@ -72,12 +72,15 @@
       padding: 1rem;
       flex: 1 1 calc(33.333% - 2rem);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      color: #333;
+      text-decoration: none;
     }
 
     .service:hover, .portfolio-item:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 0, 0, 1), 0 0 10px rgba(0, 255, 0, 1), 0 0 10px rgba(0, 0, 255, 1);
+      background-color: #a9a9a9;
     }
 
     .service h3, .portfolio-item h3 {
@@ -202,7 +205,7 @@
 </section>
 
 <section id="featured-video">
-  <h2>Featured Video</h2>
+  <h2>techpunk video</h2>
   <div style="text-align: center;">
     <iframe 
       width="560" 
