@@ -77,15 +77,46 @@
       text-decoration: none;
     }
 
+    .service.custom-3d-printing {
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('image1.jpg'), url('image2.jpg'), url('image3.jpg'); /* Replace with your image URLs */
+      animation: backgroundScroll 10s linear infinite;
+      overflow: hidden;
+    }
+
+    .service.custom-3d-printing h3, 
+    .service.custom-3d-printing p {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.8); /* To make text readable over images */
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+
+    .service.custom-3d-printing::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      z-index: 0;
+    }
+
     .service:hover, .portfolio-item:hover {
       transform: scale(1.05);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 0, 0, 1), 0 0 10px rgba(0, 255, 0, 1), 0 0 10px rgba(0, 0, 255, 1);
       background-color: #a9a9a9;
     }
 
-    .service h3, .portfolio-item h3 {
-      margin-top: 0;
-      color: #555;
+    @keyframes backgroundScroll {
+      0% { background-position: 0% 0%, 100% 0%, 200% 0%; }
+      33% { background-position: -100% 0%, 0% 0%, 100% 0%; }
+      66% { background-position: -200% 0%, -100% 0%, 0% 0%; }
+      100% { background-position: 0% 0%, 100% 0%, 200% 0%; }
     }
 
     footer {
@@ -105,34 +136,6 @@
       text-decoration: none;
       margin: 0 0.5rem;
       font-weight: bold;
-    }
-
-    /* Circle Icons */
-    .circle-icons {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
-
-    .circle-icons a {
-      display: block;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .circle-icons a:hover {
-      transform: scale(1.1);
-    }
-
-    .circle-icons img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
     @media (max-width: 768px) {
@@ -168,7 +171,7 @@
 <section id="services">
   <h2>Our Services</h2>
   <div class="services">
-    <a class="service" href="https://www.example.com/custom-3d-printing">
+    <a class="service custom-3d-printing" href="https://www.example.com/custom-3d-printing">
       <h3>Custom 3D Printing</h3>
       <p>High-quality prints tailored to your needs. Materials include PLA, PETG, and more.</p>
     </a>
@@ -182,78 +185,6 @@
     </a>
   </div>
 </section>
-
-<section id="portfolio">
-  <h2>Portfolio</h2>
-  <div class="portfolio">
-    <a class="portfolio-item" href="https://immich.seventysevenstars.com/share/cqfovleyHJ1MAUdHSQNvFAxGGvRrM0fhc-q-T3Zpf4e5UTyBPqGWOyd427bQxOKVXr0">
-      <h3>Project 1</h3>
-      <p>Prints for Turtles Kingston</p>
-      <img src="https://immich.seventysevenstars.com/share/9ibUq41DgU7NI3pZ4C18CuROyke7dEyANo1pNvERkUv2uV0zrqQwXhQYGquCDJ0NiHc" alt="Project 1" loading="lazy">
-    </a>
-    <a class="portfolio-item" href="https://www.example.com/project2">
-      <h3>Project 2</h3>
-      <p>Plex Lightbox</p>
-      <img src="project2.jpg" alt="Project 2" loading="lazy">
-    </a>
-    <a class="portfolio-item" href="https://www.example.com/project3">
-      <h3>Project 3</h3>
-      <p>Decorative home pieces that blend art and technology.</p>
-      <img src="project3.jpg" alt="Project 3" loading="lazy">
-    </a>
-  </div>
-</section>
-
-<section id="featured-video">
-  <h2>techpunk video</h2>
-  <div style="text-align: center;">
-    <iframe 
-      width="560" 
-      height="315" 
-      src="https://www.youtube.com/embed/dPQdnJPljqo" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-    seventsevenstars is a 3D printing business passionate about turning ideas into reality. 
-    With state-of-the-art printers and a commitment to quality, we specialize in custom prints, 
-    prototyping, and design support. Whether you're an engineer, artist, or hobbyist, we're here to help.
-  </p>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>
-    Email: <a href="mailto:info@seventysevenstars.com">info@seventysevenstars.com</a><br>
-    Location: Kingston, ON, Canada
-  </p>
-</section>
-
-<!-- Circle Icons at the bottom -->
-<div class="circle-icons">
-  <a href="https://plex.seventysevenstars.com" target="_blank">
-    <img src="https://beyondtv.com/wp-content/uploads/2020/04/910-9103810_plex-media-server-transparent-plex-icon.png" alt="Plex" title="Plex">
-  </a>
-  <a href="https://jellyfin.seventysevenstars.com" target="_blank">
-    <img src="https://play-lh.googleusercontent.com/FAlWhVMAjAzI6Nxc7bf4KPgjbwA3GT9j2bzeAMnRpdWim_2SXnS9i4zhwasKWIC8PV4=w480-h960" alt="Jellyfin" title="Jellyfin">
-  </a>
-  <a href="" target="_blank">
-    <img src="https://banner2.cleanpng.com/20180628/ii/aayi53218.webp" alt="Discord" title="Discord">
-  </a>
-  <a href="https://requests.seventysevenstars.com" target="_blank">
-    <img src="https://user-images.githubusercontent.com/1066576/125193232-b41d8900-e28e-11eb-801b-3b643f672536.png" alt="Requests" title="Requests">
-  </a>
-    <a href="https://www.youtube.com/@schartrand77" target="_blank">
-    <img src="https://thumbs.dreamstime.com/b/youtube-round-icon-logo-white-background-editable-vector-illustration-youtube-icon-logo-141050377.jpg" alt="youTube" title="YouTube">
-  </a>
-</div>
 
 <footer>
   <p>&copy; 2024 seventysevenstars. All rights reserved.</p>
