@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="seventysevenstars - High-quality custom 3D printing services in Kingston, ON.">
+  <meta name="description" content="seventysevenstars - High-quality custom 3D printing services in Kingston, ON. We specialize in prototypes, design assistance, and tailored prints.">
   <title>seventysevenstars - 3D Printing Services</title>
   <style>
-    /* General Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -49,7 +48,7 @@
 
     section {
       padding: 2rem;
-      max-width: 1200px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -60,16 +59,13 @@
       color: #333;
     }
 
-    /* Flexbox for Services */
     .services, .portfolio {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
-      justify-content: space-between;
     }
 
-    /* Service Cards */
-    .service {
+    .service, .portfolio-item {
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -77,35 +73,16 @@
       flex: 1 1 calc(33.333% - 2rem);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
-      color: #333;
-      text-decoration: none;
     }
 
-    .service:hover {
+    .service:hover, .portfolio-item:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 0, 0, 1), 0 0 10px rgba(0, 255, 0, 1), 0 0 10px rgba(0, 0, 255, 1);
     }
 
-    /* Custom 3D Printing Scrolling Effect */
-    .service.custom-3d-printing {
-      background-size: cover;
-      background-image: url('image1.jpg'), url('image2.jpg'), url('image3.jpg'); /* Replace with actual image URLs */
-      animation: backgroundScroll 10s linear infinite;
-      color: white;
-    }
-
-    .service.custom-3d-printing h3, 
-    .service.custom-3d-printing p {
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 5px;
-      padding: 0.5rem;
-    }
-
-    @keyframes backgroundScroll {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 100% 0%; }
-      100% { background-position: 0% 0%; }
+    .service h3, .portfolio-item h3 {
+      margin-top: 0;
+      color: #555;
     }
 
     footer {
@@ -113,23 +90,61 @@
       color: #fff;
       text-align: center;
       padding: 1rem;
+      margin-top: 2rem;
     }
 
-    footer a {
+    footer p {
+      margin: 0;
+    }
+
+    footer div a {
       color: #fff;
       text-decoration: none;
       margin: 0 0.5rem;
+      font-weight: bold;
     }
 
-    /* Mobile Styles */
+    /* Circle Icons */
+    .circle-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .circle-icons a {
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .circle-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .circle-icons img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     @media (max-width: 768px) {
-      .service {
+      .service, .portfolio-item {
         flex: 1 1 100%;
       }
 
+      header {
+        flex-wrap: wrap;
+        text-align: center;
+      }
+
       nav a {
-        display: block;
         margin: 0.5rem 0;
+        display: inline-block;
       }
     }
   </style>
@@ -137,7 +152,7 @@
 <body>
 
 <header>
-  <img src="https://i.imgur.com/qffhjnW.jpg" alt="Logo">
+  <img src="https://i.imgur.com/qffhjnW.jpg" alt="seventysevenstars Logo">
   <h1>seventysevenstars</h1>
   <nav>
     <a href="#services">Services</a>
@@ -150,35 +165,97 @@
 <section id="services">
   <h2>Our Services</h2>
   <div class="services">
-    <div class="service custom-3d-printing">
+    <a class="service" href="https://www.example.com/custom-3d-printing">
       <h3>Custom 3D Printing</h3>
-      <p>High-quality prints tailored to your needs.</p>
-    </div>
-    <div class="service">
+      <p>High-quality prints tailored to your needs. Materials include PLA, PETG, and more.</p>
+    </a>
+    <a class="service" href="https://www.example.com/rapid-prototyping">
       <h3>Rapid Prototyping</h3>
       <p>Fast turnaround for prototypes to bring your ideas to life quickly.</p>
-    </div>
-    <div class="service">
+    </a>
+    <a class="service" href="https://www.example.com/design-assistance">
       <h3>Design Assistance</h3>
-      <p>Need help with your 3D models? We offer design optimization.</p>
-    </div>
+      <p>Need help with your 3D models? We offer design optimization and consulting.</p>
+    </a>
   </div>
 </section>
 
 <section id="portfolio">
   <h2>Portfolio</h2>
   <div class="portfolio">
-    <div class="portfolio-item">Project 1</div>
-    <div class="portfolio-item">Project 2</div>
-    <div class="portfolio-item">Project 3</div>
+    <a class="portfolio-item" href="https://www.example.com/project1">
+      <h3>Project 1</h3>
+      <p>Prints for Turtles Kingston</p>
+      <img src="project1.jpg" alt="Project 1" loading="lazy">
+    </a>
+    <a class="portfolio-item" href="https://www.example.com/project2">
+      <h3>Project 2</h3>
+      <p>Plex Lightbox</p>
+      <img src="project2.jpg" alt="Project 2" loading="lazy">
+    </a>
+    <a class="portfolio-item" href="https://www.example.com/project3">
+      <h3>Project 3</h3>
+      <p>Decorative home pieces that blend art and technology.</p>
+      <img src="project3.jpg" alt="Project 3" loading="lazy">
+    </a>
   </div>
 </section>
 
+<section id="featured-video">
+  <h2>Featured Video</h2>
+  <div style="text-align: center;">
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/dPQdnJPljqo" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    seventsevenstars is a 3D printing business passionate about turning ideas into reality. 
+    With state-of-the-art printers and a commitment to quality, we specialize in custom prints, 
+    prototyping, and design support. Whether you're an engineer, artist, or hobbyist, we're here to help.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>
+    Email: <a href="mailto:info@seventysevenstars.com">info@seventysevenstars.com</a><br>
+    Location: Kingston, ON, Canada
+  </p>
+</section>
+
+<!-- Circle Icons at the bottom -->
+<div class="circle-icons">
+  <a href="https://plex.seventysevenstars.com" target="_blank">
+    <img src="https://beyondtv.com/wp-content/uploads/2020/04/910-9103810_plex-media-server-transparent-plex-icon.png" alt="Plex" title="Plex">
+  </a>
+  <a href="https://jellyfin.seventysevenstars.com" target="_blank">
+    <img src="https://play-lh.googleusercontent.com/FAlWhVMAjAzI6Nxc7bf4KPgjbwA3GT9j2bzeAMnRpdWim_2SXnS9i4zhwasKWIC8PV4=w480-h960" alt="Jellyfin" title="Jellyfin">
+  </a>
+  <a href="" target="_blank">
+    <img src="https://banner2.cleanpng.com/20180628/ii/aayi53218.webp" alt="Discord" title="Discord">
+  </a>
+  <a href="https://requests.seventysevenstars.com" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Discord_Logo_2023.svg" alt="Requests" title="Requests">
+  </a>
+</div>
+
 <footer>
   <p>&copy; 2024 seventysevenstars. All rights reserved.</p>
-  <a href="#services">Services</a>
-  <a href="#portfolio">Portfolio</a>
-  <a href="#contact">Contact</a>
+  <div>
+    <a href="https://www.example.com/about" target="_blank">About</a>
+    <a href="https://www.example.com/contact" target="_blank">Contact</a>
+    <a href="https://www.example.com/privacy" target="_blank">Privacy Policy</a>
+  </div>
 </footer>
 
 </body>
